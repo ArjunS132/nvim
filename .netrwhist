@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/usr/local/bin'
+let g:netrw_dirhist_3='/usr/local'
+let g:netrw_dirhist_2='/usr/local/bin'
+let g:netrw_dirhist_1='/Users/arjun/vimwiki'
+let g:netrw_dirhist_0='/Users/arjun'
+let g:netrw_dirhist_9='/Users/arjun/vimwiki'
+let g:netrw_dirhist_8='/Users/arjun/.config/nvim/plugged/vimwiki'
+let g:netrw_dirhist_7='/Users/arjun/.config/nvim/plugged'
+let g:netrw_dirhist_6='/Users/arjun/.config/nvim'
+let g:netrw_dirhist_5='/Users/arjun/.config/nvim/lua'
