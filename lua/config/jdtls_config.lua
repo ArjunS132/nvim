@@ -1,8 +1,5 @@
 local M = {}
 function M.setup()
-  vim.cmd[[set softtabstop=4]]
-  vim.cmd[[set shiftwidth=4]]
-  vim.cmd[[set expandtab]]
   -- Utility servers
   local map = function(type, key, value)
     vim.api.nvim_buf_set_keymap(0,type,key,value,{noremap = true, silent = true});

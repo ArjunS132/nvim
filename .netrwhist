@@ -1,4 +1,4 @@
-let g:netrw_dirhistmax  =10
+xlet g:netrw_dirhistmax  =10
 let g:netrw_dirhistcnt =4
 let g:netrw_dirhist_4='/usr/local/bin'
 let g:netrw_dirhist_3='/usr/local'
