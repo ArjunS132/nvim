@@ -1,4 +1,5 @@
 undodir2/**
+plugged/**
 .DS_Store
 .netrwhist
 autoload/**

@@ -15,6 +15,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'RishabhRD/nvim-lsputils'
 Plug 'RishabhRD/popfix'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -30,4 +32,4 @@ require('config/telescope')
 require('config/treesitter')
 require('config/lsp')
 require('config/colorscheme')
-
+require('config/lsputil')

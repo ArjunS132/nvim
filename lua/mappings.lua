@@ -5,13 +5,6 @@ expr_options = {noremap = true, expr = true, silent = true}
 -- map the leader key
 map("n", "<Space>", "<NOP>", default_options)
 
--- all my lets
-vim.g.mapleader = " "
-vim.g.netrw_browse_split='2'
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 25
-vim.g.completion_matching_strategy_list='exact', 'substring', 'fuzzy'
-
 -- Telescope remap
 map('n', '<leader>ff','<cmd>Telescope find_files<cr>', default_options)
 map('n', '<leader>fg','<cmd>Telescope live_grep<cr>', default_options)
@@ -58,6 +51,9 @@ map('c', '<C-l>', '<down>', default_options)
 map("v", "p", "\"_dP", default_options)
 
 -- lsp mappings
+map('n', '<leader>af', '<cmd>lua vim.lsp.buf.code_action()<CR>', default_options)
+
+--
 -- GOTO mappings
 map('n','<leader>gD','<cmd>lua vim.lsp.buf.declaration()<CR>', default_options)
 map('n','<leader>gd','<cmd>lua vim.lsp.buf.definition()<CR>', default_options)
@@ -70,7 +66,7 @@ map('n','<leader>gw','<cmd>lua vim.lsp.buf.document_symbol()<CR>', default_optio
 map('n','<leader>gW','<cmd>lua vim.lsp.buf.workspace_symbol()<CR>', default_options)
 -- ACTION mappings
 map('n','<leader>ah',  '<cmd>lua vim.lsp.buf.hover()<CR>', default_options)
-map('n','<leader>af', '<cmd>lua require"jdtls".code_action()<CR>', default_options)
+-- map('n','<leader>af', '<cmd>lua require"jdtls".code_action()<CR>', default_options)
 map('n','<leader>vr',  '<cmd>lua vim.lsp.buf.rename()<CR>', default_options)
 -- Few language severs support these three
 map('n','<leader>=',  '<cmd>lua vim.lsp.buf.formatting()<CR>', default_options)

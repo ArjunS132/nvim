@@ -17,7 +17,7 @@ end
   map('n','<leader>gW','<cmd>lua vim.lsp.buf.workspace_symbol()<CR>')
   -- ACTION mappings
   map('n','<leader>ah',  '<cmd>lua vim.lsp.buf.hover()<CR>')
-  map('n','<leader>af', '<cmd>lua require"jdtls".code_action()<CR>')
+  -- map('n','<leader>af', '<cmd>lua require"jdtls".code_action()<CR>')
   map('n','<leader>vr',  '<cmd>lua vim.lsp.buf.rename()<CR>')
   -- Few language severs support these three
   map('n','<leader>=',  '<cmd>lua vim.lsp.buf.formatting()<CR>')
@@ -29,8 +29,8 @@ end
   map('n','<leader>ep', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
 
 local jdtls_ui = require'jdtls.ui'
-function jdtls_ui.pick_one_async(items, prompt, label_fn, cb)
-  require'lsputil.codeAction'.code_action_handler(nil, items, nil, nil, cb)
+function jdtls_ui.pick_one_async(items, _, _, cb)
+  require'lsputil.codeAction'.code_action_handler(nil, nil, items, nil, nil, nil, cb)
 end
   vim.cmd[[command! -buffer JdtCompile lua require('jdtls').compile()]]
   vim.cmd[[command! -buffer JdtUpdateConfig lua require('jdtls').update_project_config()]]
@@ -64,7 +64,10 @@ vim.g.lsp_utils_symbos_opts = {
     },
     prompt = {}
 }
-vim.lsp.handlers['textDocument/codeAction'] = require'lsputil.codeAction'.code_action_handler
+
+vim.lsp.handlers['textDocument/codeAction'] = function(_, _, actions)
+    require('lsputil.codeAction').code_action_handler(nil, nil, actions, nil, nil, nil)
+end
 vim.lsp.handlers['textDocument/references'] = require'lsputil.locations'.references_handler
 vim.lsp.handlers['textDocument/definition'] = require'lsputil.locations'.definition_handler
 vim.lsp.handlers['textDocument/declaration'] = require'lsputil.locations'.declaration_handler
