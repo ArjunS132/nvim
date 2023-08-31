@@ -1,5 +1,5 @@
-undodir2/**
-plugged/**
+undodir2/
+plugged/
 .DS_Store
 .netrwhist
-autoload/**
+autoload/
