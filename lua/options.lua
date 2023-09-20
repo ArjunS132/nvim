@@ -25,6 +25,7 @@ o.updatetime = 50
 o.termguicolors = true
 o.hlsearch = false
 o.completeopt = 'menu,menuone,noselect'
+o.mouse = ""
 
 -- 80 character limit column
 o.colorcolumn = '80'

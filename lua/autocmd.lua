@@ -12,3 +12,5 @@ vim.api.nvim_exec([[
     au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   augroup END
   ]], false)
+
+-- have tab size of 2 in java

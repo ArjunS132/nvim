@@ -42,6 +42,10 @@ Plug( 'L3MON4D3/LuaSnip', {['tag'] = 'v2.*', ['do'] = 'make install_jsregexp'})
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug "rafamadriz/friendly-snippets"
 
+-- dap
+Plug "mfussenegger/nvim-dap"
+Plug "jay-babu/mason-nvim-dap.nvim"
+
 vim.call('plug#end')
 
 require('config/cmp')
