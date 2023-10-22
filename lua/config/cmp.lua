@@ -20,7 +20,21 @@ cmp.setup {
     ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
     ["<C-e>"] = cmp.mapping.abort(), -- close completion window
     ["<CR>"] = cmp.mapping.confirm({ select = false }),
-    ['<ESC>'] = cmp.mapping.close()
+    ['<ESC>'] = cmp.mapping.close(),
+    ['<C-f>'] = cmp.mapping(function(fallback) -- jump to next slot in snippit
+      if luasnip.jumpable(1) then
+        luasnip.jump(1)
+      else
+        fallback()
+      end
+    end, {'i', 's'}),
+    ['<C-d>'] = cmp.mapping(function(fallback) -- jump to next slot in snippit
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, {'i', 's'}),
   },
 
   sources = {
