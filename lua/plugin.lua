@@ -17,7 +17,10 @@ Plug 'nvim-telescope/telescope.nvim'
 -- note taking
 Plug 'vimwiki/vimwiki'
 -- colorscheme
-Plug 'gruvbox-community/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'morhetz/gruvbox'
+Plug('catppuccin/nvim', {['as']= 'catppuccin' } )
+Plug 'folke/tokyonight.nvim'
 -- undotree
 Plug 'mbbill/undotree'
 -- lsp stuff
