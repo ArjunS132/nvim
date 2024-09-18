@@ -44,10 +44,15 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug( 'L3MON4D3/LuaSnip', {['tag'] = 'v2.*', ['do'] = 'make install_jsregexp'})
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug "rafamadriz/friendly-snippets"
+Plug "SirVer/ultisnips"
+
 
 -- dap
 Plug "mfussenegger/nvim-dap"
 Plug "jay-babu/mason-nvim-dap.nvim"
+
+-- LaTeX
+Plug "lervag/vimtex"
 
 vim.call('plug#end')
 
@@ -58,3 +63,4 @@ require('config/colorscheme')
 require('config/lsputil')
 require('config/mason')
 require('config/jdtls')
+require('config/vimtex')
