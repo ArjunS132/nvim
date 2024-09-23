@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { 'pyright', 'html', 'tsserver', 'clangd', 'jdtls', 'cssls' }
+    ensure_installed = { 'pyright', 'html', 'clangd', 'jdtls', 'cssls', 'ts_ls' }
 })
 
 

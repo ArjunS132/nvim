@@ -35,7 +35,6 @@ o.guicursor = ''
 o.termguicolors = true
 o.background = "dark" -- or "light" for light mode
 
-
 -- all my lets
 vim.g.mapleader = " "
 vim.g.netrw_browse_split='4'
@@ -44,4 +43,3 @@ vim.g.netrw_liststyle = 3
 vim.g.netrw_altv = 1
 vim.g.netrw_preview = 1
 
-vim.g.completion_matching_strategy_list='exact', 'substring', 'fuzzy'

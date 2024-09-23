@@ -2,14 +2,18 @@
 local cmp = require "cmp"
 local luasnip = require "luasnip"
 
-require("luasnip/loaders/from_vscode").lazy_load()
 vim.opt.completeopt = "menu,menuone,noselect"
 
 cmp.setup {
+  -- snippet = {
+  --   expand = function(args)
+  --     vim.fn["vsnip#anonymous"](args.body)
+  --   end,
+  -- },
   snippet = {
-    expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
-    end,
+      expand = function(args)
+        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      end,
   },
 
   mapping = {
@@ -21,14 +25,14 @@ cmp.setup {
     ["<C-e>"] = cmp.mapping.abort(), -- close completion window
     ["<CR>"] = cmp.mapping.confirm({ select = false }),
     ['<ESC>'] = cmp.mapping.close(),
-    ['<C-f>'] = cmp.mapping(function(fallback) -- jump to next slot in snippit
+    ['<Tab>'] = cmp.mapping(function(fallback) -- jump to next slot in snippit
       if luasnip.jumpable(1) then
         luasnip.jump(1)
       else
         fallback()
       end
     end, {'i', 's'}),
-    ['<C-d>'] = cmp.mapping(function(fallback) -- jump to next slot in snippit
+    ['<S-Tab>'] = cmp.mapping(function(fallback) -- jump to prev slot in snippit
       if luasnip.jumpable(-1) then
         luasnip.jump(-1)
       else

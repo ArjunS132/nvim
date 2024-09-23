@@ -43,9 +43,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 -- snipets
 Plug( 'L3MON4D3/LuaSnip', {['tag'] = 'v2.*', ['do'] = 'make install_jsregexp'})
 Plug 'saadparwaiz1/cmp_luasnip'
-Plug "rafamadriz/friendly-snippets"
-Plug "SirVer/ultisnips"
-
+-- Plug "rafamadriz/friendly-snippets"
+Plug "evesdropper/luasnip-latex-snippets.nvim"
 
 -- dap
 Plug "mfussenegger/nvim-dap"
@@ -64,3 +63,4 @@ require('config/lsputil')
 require('config/mason')
 require('config/jdtls')
 require('config/vimtex')
+require('config/luasnips')
