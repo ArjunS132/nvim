@@ -43,7 +43,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 -- snipets
 Plug( 'L3MON4D3/LuaSnip', {['tag'] = 'v2.*', ['do'] = 'make install_jsregexp'})
 Plug 'saadparwaiz1/cmp_luasnip'
--- Plug "rafamadriz/friendly-snippets"
+Plug "rafamadriz/friendly-snippets"
 Plug "evesdropper/luasnip-latex-snippets.nvim"
 
 -- dap
